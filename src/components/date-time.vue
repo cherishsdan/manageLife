@@ -7,7 +7,6 @@
       <i class="mdi mdi-calendar-clock right small waves-effect waves-light"
       :class="{'active':isactive}"
       @click='activeOrNot'></i>
-      <!-- data-position='left' data-delay='50' data-tooltip="Click To Toggle" -->
     </div> 
   </div>
 </template>
@@ -19,7 +18,6 @@ export default {
       date:'',
       week:'',
       time:'',
-      // isActive:lightodoStorage.timeStorage.fetch(),
       clearTime:null
     }
   },
@@ -31,7 +29,6 @@ export default {
     showDatetime:function(isactive){
       var self = this;
       console.log("self.date:"+self.date);
-      // self.isactive = self.isactive ? false : true;
       if(isactive){
         self.date = datetime.getActiveDateString();   
         self.week = datetime.getWeekday();

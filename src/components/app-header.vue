@@ -24,14 +24,11 @@
             <!-- now What are you doing now?-->
           </div>
           <div class="col s4 center user">
-            <!-- <img src="../../lib/imgs/Alex.jpg" alt="" class="circle responsive-img" > -->
             <div class="nickpic circle" v-show="loggedIn">
               <span class="nickletter">{{ nickletter }}</span>
             </div>
             <p class="showNickname" v-show="loggedIn" v-cloak>{{ nickname }}</p>
             <button class="btn-floating waves-effect waves-purple-lightodo white login-button" @click="userLogin" v-show="!loggedIn">
-            <!-- ng-click="editButton.goToEdit()" ng-show="editButton.showButton" -->
-                <!-- <i class="large material-icons">mode_edit</i> -->
                 <i class="mdi mdi-account-outline"></i>
             </button>
             
@@ -161,16 +158,14 @@
 import dateTime from './date-time.vue'
 import quote from './quote.vue'
 import signup from './signup.vue'
-// import Wilddog from 'https://cdn.wilddog.com/js/client/current/wilddog.js'
-// var Wilddog = require("wilddog");
-// var Vue = require("vue");
+
 
 export default {
   data () {
     return {
       now: null,
       reminder: null,
-      ref: new Wilddog("https://lightodo.wilddogio.com/"),
+      ref: new Wilddog("https://managelife.wilddogio.com/"),
       hasAccount:true,
       loggedIn:false,
       ifClicked:false,
@@ -418,9 +413,6 @@ export default {
   },
   directives:{
     isuser:function(val){
-      // if(!val.loggedIn){
-      //   val.fnload();
-      // }
       if(localStorage.getItem('wilddog:session::lightodo')){
         val.fnload();
       }

@@ -15,7 +15,6 @@
 export default {
   data () {
     return {
-      // quote:lightodoStorage.quoteStorage.fetch(),
       editedQuote:false
     }
   },
@@ -46,7 +45,6 @@ export default {
   watch:{
     'quote':function(val){
       if(this.loggedin){
-        // console.log('watch reminder update');
         wdsync.updateData({'quote':val});
       }else{
         lightodoStorage.quoteStorage.save(val);
