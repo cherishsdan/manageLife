@@ -1,5 +1,4 @@
-
-=======
 manageLife
+=======
 
 using vue.js
