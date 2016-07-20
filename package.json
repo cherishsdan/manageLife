@@ -1,7 +1,7 @@
 {
-  "name": "lightodo",
-  "description": "A Todo SPA based on Vue.js",
-  "author": "Alex Lee <kokominiwork@gmail.com>",
+  "name": "manageLife",
+  "description": "SPA using Vue.js",
+  "author": "cherishsdan",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
